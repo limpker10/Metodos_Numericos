@@ -37,7 +37,15 @@
                 </div>
             </nav>
         </section>
-        <section class="container"></section>
+        <section class="container">
+            <form action="metodoBiseccion" method="post">
+                {% csrf_token %}
+                <input type="text" name="nombre">
+                <button type="submit">enviar</button>
+            </form>
+            {% block content %}
+            {% endblock %}
+        </section>
     </div>
 </body>
 </html>
