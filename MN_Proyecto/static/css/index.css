@@ -1,0 +1,75 @@
+:root {
+    --blanco: #E0E0E0;
+    --azul-opacidad: #184463;
+    --bg-menu: #003053;
+    --bg-body: #C7E1FF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.main { 
+    display: flex;
+    flex-direction: row;
+}
+.container-panel {
+    min-width: 10%;
+    height: 100vh;
+    background: var(--bg-menu);
+    padding: 20px;
+    transition: min-width .3s ease;
+}
+.separador {
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+.enlaces {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50%;
+}
+.enlaces a {
+    outline: none;
+    text-decoration: none;
+    color: white;
+}
+.item { 
+    text-align: center;
+}
+.container { 
+    background-color: #184463;
+    width: 100%;
+    height: 100vh;
+}
+@keyframes myfirst {
+    0%   {background: red; left: 0px; top: 0px;}
+    100% {background: rgb(5, 3, 3); left: -100%; top: 0px;}
+}
+
+@media screen and (max-width: 480px) {
+    .container-panel {
+        position: absolute;
+        width: 100%;
+        background-color: rebeccapurple;
+        animation: myfirst 3s;
+        left: -100%;
+    }
+    .container {
+        max-width: 100%;
+        background-color: #184463;
+    }
+    
+}
